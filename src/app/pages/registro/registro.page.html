@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <form [formGroup]="formularioRegistro" (ngSubmit)="registrar()">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">FirstName</ion-label>
+          <ion-input formControlName="firstName" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input  formControlName="password" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label position="stacked">Age</ion-label>
+        <ion-input formControlName="age" type="number" placeholder="Age"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="text" placeholder="password"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>birthDate</ion-label>
+        <ion-item>
+          <ion-datetime display-format="DD.MM.YYYY" formControlName="birthDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select value="gender" placeholder="" formControlName="gender">
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-button color="primary" type="submit" role="submit">
+      Registro
+    </ion-button>
+    </form>
+  </ion-grid>
+</ion-content>
